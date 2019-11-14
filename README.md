@@ -10,7 +10,7 @@
 
 Using the Recipe Puppy API (http://www.recipepuppy.com/about/api/), I build an app that allows the user to search recipes filtering by name or by one/many ingredients.
 
-<h1>Technology stack used:</h1>
+# Technology stack used:
 
 The technology stack used for this example, including libraries and tools are:
   - Ionic

@@ -1,10 +1,11 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IonicModule } from '@ionic/angular';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-
+import { IonicModule } from '@ionic/angular';
+import { RecipeComponent } from '../components/recipe/recipe.component';
 import { HomePage } from './home.page';
+
 
 @NgModule({
   imports: [
@@ -18,6 +19,6 @@ import { HomePage } from './home.page';
       }
     ])
   ],
-  declarations: [HomePage]
+  declarations: [HomePage, RecipeComponent]
 })
-export class HomePageModule {}
+export class HomePageModule { }

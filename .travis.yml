@@ -5,6 +5,10 @@ language: node_js
 node_js:
   - '12'
 
+branches:
+  only:
+  - master
+
 addons:
   apt:
     sources:
@@ -20,7 +24,8 @@ install:
   - npm install
 
 script:
-  - npm run build --prod
+  - npm run build --prod --base-href /ionicrecipepuppy/
+  - mv dist/ionicrecipepuppy/index.html dist/ionicrecipepuppy/404.html 
 
 deploy:
   provider: pages

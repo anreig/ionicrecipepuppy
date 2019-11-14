@@ -58,7 +58,6 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "baseHref": "https://anreig.github.io/ionicrecipepuppy/",
               "budgets": [
                 {
                   "type": "initial",

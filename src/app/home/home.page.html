@@ -1,14 +1,29 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-searchbar clearIcon (ionChange)="search($event, false)" debounce="500"></ion-searchbar>
+    <ion-chip scrollX="true" *ngFor="let ingredient of ingredients">
+      <ion-icon name="funnel" color="primary"></ion-icon>
+      <ion-label>{{ingredient}}</ion-label>
+      <ion-icon name="close" (click)="ingredientSelected(ingredient)"></ion-icon>
+    </ion-chip>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+  <h1 *ngIf="!searching" class="text-center">Recipes</h1>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let recipe of items" size-xs="12" size-xl="2">
+        <app-recipe [ingredients]="recipe.ingredients.split(',')" [recipeItem]="recipe"
+          (onIngredientSelected)="ingredientSelected($event)"></app-recipe>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>

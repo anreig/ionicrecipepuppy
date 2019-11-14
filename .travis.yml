@@ -24,13 +24,13 @@ install:
   - npm install
 
 script:
-  - npm run build --prod --base-href /ionicrecipepuppy/
-  - mv dist/ionicrecipepuppy/index.html dist/ionicrecipepuppy/404.html 
+  - npm run build --prod
+  - mv www/index.html
 
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  local_dir: dist/ionicrecipepuppy
+  local_dir: www
   on:
     branch: master

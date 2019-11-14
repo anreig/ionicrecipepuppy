@@ -7,8 +7,9 @@
 [![Build Status](https://travis-ci.com/anreig/ionicrecipepuppy.svg?branch=master)](https://travis-ci.com/anreig/ionicrecipepuppy)
 [![CodeFactor](https://www.codefactor.io/repository/github/anreig/ionicrecipepuppy/badge)](https://www.codefactor.io/repository/github/anreig/ionicrecipepuppy)
 
-
 Using the Recipe Puppy API (http://www.recipepuppy.com/about/api/), I build an app that allows the user to search recipes filtering by name or by one/many ingredients.
+
+[Demo](https://anreig.github.io/ionicrecipepuppy/)
 
 # Technology stack used:
 

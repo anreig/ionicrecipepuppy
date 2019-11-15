@@ -20,7 +20,7 @@ install:
   - npm install
 
 script:
-  - npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox --code-coverage && cat ./coverage/lcov.info | coveralls
+  - npm run test -- --watch=false --no-progress --code-coverage && cat ./coverage/lcov.info | coveralls
   - ng build --prod --base-href https://anreig.github.io/ionicrecipepuppy/
 
 deploy:

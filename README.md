@@ -2,7 +2,6 @@
 
 [![Build Status](https://travis-ci.com/anreig/ionicrecipepuppy.svg?branch=master)](https://travis-ci.com/anreig/ionicrecipepuppy)
 [![CodeFactor](https://www.codefactor.io/repository/github/anreig/ionicrecipepuppy/badge)](https://www.codefactor.io/repository/github/anreig/ionicrecipepuppy)
-[![Coverage Status](https://coveralls.io/repos/github/anreig/ionicrecipepuppy/badge.svg?branch=master)](https://coveralls.io/github/anreig/ionicrecipepuppy?branch=master)
 
 ![Recipe Puppy Ionic App](http://www.recipepuppy.com/img/logonew.png "Recipe Puppy Ionic App")
 

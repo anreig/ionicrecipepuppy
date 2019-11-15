@@ -37,9 +37,13 @@ using OnPush change detection strategy for performance
 
 ## Development server
 
-Run npm install to install dependencies.
+Run **npm install** to install dependencies.
 
-Run ionic serve for a dev server. Navigate to http://localhost:8100/. The app will automatically reload if you change any of the source files.
+    npm install
+
+Run **ionic serve** for a dev server. Navigate to http://localhost:8100/. The app will automatically reload if you change any of the source files.
+
+    ionic serve
 
 ## Improvements TODO
 

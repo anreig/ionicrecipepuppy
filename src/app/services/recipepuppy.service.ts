@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
@@ -25,11 +25,11 @@ export class RecipepuppyService {
 
   getOrSearchRecipes(req?): Observable<Recipe[]> {
     const options = createRequestOption(req);
-    const headers = new HttpHeaders().set(
-      'X-Requested-With',
-      'For use with cors-anywhere'
-    )
-    return this.http.get<any>(this.CORS_HELPER + this.API_URL, { params: options, headers }).pipe(map(items => items.results),
+    // const headers = new HttpHeaders().set(
+    //   'X-Requested-With',
+    //   'For use with cors-anywhere'
+    // )
+    return this.http.get<any>(this.CORS_HELPER + this.API_URL, { params: options }).pipe(map((items: ApiResponse<Recipe>) => items.results),
       catchError((e, _) => {
         this.logger.error('Error searching Recipes', e);
         return [];

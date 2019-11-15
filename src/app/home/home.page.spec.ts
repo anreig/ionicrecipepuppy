@@ -1,7 +1,9 @@
+import { HttpClientModule } from '@angular/common/http';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
-
+import { RecipeComponent } from '../components/recipe/recipe.component';
 import { HomePage } from './home.page';
+
 
 describe('HomePage', () => {
   let component: HomePage;
@@ -9,8 +11,8 @@ describe('HomePage', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomePage ],
-      imports: [IonicModule.forRoot()]
+      declarations: [HomePage, RecipeComponent],
+      imports: [IonicModule.forRoot(), HttpClientModule]
     }).compileComponents();
 
     fixture = TestBed.createComponent(HomePage);

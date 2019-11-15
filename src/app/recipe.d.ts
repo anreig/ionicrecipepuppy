@@ -8,3 +8,10 @@ declare interface Recipe {
 declare interface Ingredient {
     name: string;
 }
+
+declare interface ApiResponse<T> {
+    href: string;
+    results: Array<T>;
+    title: string;
+    version: string;
+}

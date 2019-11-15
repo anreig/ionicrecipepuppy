@@ -25,13 +25,15 @@ export class HomePage implements OnInit {
 
   doInfinite(infiniteScroll?) {
     this.params['page'] = this.page += 1;
-    this.listRecipes(this.params);
+    this.listRecipes(this.params, true);
     infiniteScroll.target.complete();
   }
 
-  listRecipes(params?) {
+  listRecipes(params?, infiniteScroll?) {
     this.service.getOrSearchRecipes(params).pipe(map(result => {
-      this.items = result;
+      infiniteScroll ?
+        this.items.push(...result) :
+        this.items = result;
       return this.items;
     })).subscribe();
   }
@@ -58,7 +60,7 @@ export class HomePage implements OnInit {
 
   ingredientSelected(event) {
 
-    if (this.ingredients.indexOf(event) === -1) {
+    if (!this.ingredients.includes(event)) {
       this.ingredients.push(event.trim());
     } else {
       const index: number = this.ingredients.indexOf(event);
